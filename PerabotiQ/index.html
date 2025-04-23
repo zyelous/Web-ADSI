@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Index</title>
+
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+      
+      <a href="index.html" class="logo d-flex align-items-center">
+        <h1 class="sitename">PerabotiQ</h1>
+      </a>
+  
+      <!-- NAV TOGGLE - Checkbox Hack -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle d-xl-none">
+      <label for="nav-toggle" class="mobile-nav-toggle d-xl-none">
+        <i class="bi bi-list"></i>
+      </label>
+  
+      <!-- NAV MENU -->
+      <nav id="navmenu">
+        <ul class="navmenu">
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#products">Products</a></li>
+        </ul>
+      </nav>
+  
+      <!-- RIGHT BUTTONS -->
+      <div class="d-flex gap-2 align-items-center">
+        <button class="btn btn-outline-light" title="Search"><i class="bi bi-search"></i></button>
+  
+        <!-- PROFILE DROPDOWN BUTTON -->
+        <div class="profile-wrapper position-relative">
+          <button class="btn btn-outline-light" title="Profile" onclick="toggleProfileDropdown()">
+            <i class="bi bi-person-circle"></i>
+          </button>
+  
+          <!-- Dropdown -->
+          <div class="profile-dropdown" id="profileDropdown">
+            <div class="arrow-up"></div>
+            <div class="dropdown-content">
+              <a href="login.html">Sign in</a>
+              <a href="register.html">Create Account</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </header>
+  
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+      <div id="hero-carousel" data-bs-interval="5000" class="container-fluid carousel carousel-fade" data-bs-ride="carousel">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active" style="background-image: url('https://www.bassettfurniture.com/on/demandware.static/-/Sites-bassett-Library/default/dwd3e7a906/2676-LSECTA-Beckham-FA21.jpeg');">
+          <div class="carousel-container">
+            <h2 class="animate__animated animate__fadeInDown" style="color: brown;">Welcome to <span>PerabotiQ</span></h2>
+            <p class="animate__animated animate__fadeInUp" style="color: brown;">Perabot berkualitas untuk setiap ruangan</p>
+            <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item" style="background-image: url('https://events.rumah123.com/wp-content/uploads/sites/38/2021/07/07043141/Furniture-Kamar-Tidur1.png');">
+          <div class="carousel-container">
+            <h2 class="animate__animated animate__fadeInDown" style="color: brown;">Ruang Tidur Impian</h2>
+            <p class="animate__animated animate__fadeInUp" style="color: brown;">Nyaman dan modern, temukan inspirasi desain terbaik untuk ruang tidur Anda.</p>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-item" style="background-image: url('https://th.bing.com/th/id/R.9000e8e0a9f51c62ff3314a33d305f6c?rik=EeKPqMJKtCWHiw&riu=http%3a%2f%2fdekorrumah.net%2fwp-content%2fuploads%2f2016%2f12%2fModel-Ruang-Makan-Minimalis-Menyatu-Dengan-Dapur-2017.jpg&ehk=893znDNE2%2bBx8AJkP%2bBatFy7MfXlhezK9NfMNWF6st4%3d&risl=&pid=ImgRaw&r=0');">
+          <div class="carousel-container">
+            <h2 class="animate__animated animate__fadeInDown">Gaya Minimalis Modern</h2>
+            <p class="animate__animated animate__fadeInUp">Desain ruang makan dengan sentuhan minimalis dan elegan.</p>
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </a>
+
+        <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </a>
+
+      </div>
+    
+    </section><!-- /Hero Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>About</h2>
+        <p>Who we are</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua.
+            </p>
+            <ul>
+              <li><i class="bi bi-check2-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></li>
+              <li><i class="bi bi-check2-circle"></i> <span>Duis aute irure dolor in reprehenderit in voluptate velit.</span></li>
+              <li><i class="bi bi-check2-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo</span></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <p>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+            <a href="#" class="read-more"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+
+    
+    <section id="products" class="products section">
+
+    <!-- Products Section -->
+    <section id="products" class="products section">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Product</h2>
+        <p>Detail Product</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+        <div class="row gy-4">
+
+          <!-- Product 1 -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="product-item position-relative p-0 overflow-hidden">
+              <a href="product-details.html">
+                <img src="https://ilhamdekorasi.my/wp-content/uploads/2020/09/12.jpg" alt="Product 1" class="product-img">
+              </a>
+            </div>
+          </div>
+
+           <!-- Product 2 -->
+           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="product-item position-relative p-0 overflow-hidden">
+              <a href="product-details.html">
+                <img src="https://ilhamdekorasi.my/wp-content/uploads/2020/09/12.jpg" alt="Product 1" class="product-img">
+              </a>
+            </div>
+          </div>
+
+          <!-- Product 3 -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="product-item position-relative p-0 overflow-hidden">
+              <a href="product-details.html">
+                <img src="https://m.media-amazon.com/images/I/81CUTFDpwIL.jpg" alt="Product 3" class="product-img">
+              </a>
+            </div>
+          </div>
+
+          <!-- Product 4 -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="product-item position-relative p-0 overflow-hidden">
+              <a href="product-details.html">
+                <img src="https://m.media-amazon.com/images/I/81CUTFDpwIL.jpg" alt="Product 4" class="product-img">
+              </a>
+            </div>
+          </div>
+
+          <!-- Product 5 -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="product-item position-relative p-0 overflow-hidden">
+              <a href="product-details.html">
+                <img src="https://m.media-amazon.com/images/I/81CUTFDpwIL.jpg" alt="Product 5" class="product-img">
+              </a>
+            </div>
+          </div>
+
+          <!-- Product 6 -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="product-item position-relative p-0 overflow-hidden">
+              <a href="product-details.html">
+                <img src="https://m.media-amazon.com/images/I/81CUTFDpwIL.jpg" alt="Product 6" class="product-img">
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+  <footer id="footer" class="footer dark-background">
+    <div class="container">
+      <h3 class="sitename">PerabotiQ</h3>
+      <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p>
+      <div class="social-links d-flex justify-content-center">
+        <a href=""><i class="bi bi-twitter-x"></i></a>
+        <a href=""><i class="bi bi-facebook"></i></a>
+        <a href=""><i class="bi bi-instagram"></i></a>
+        <a href=""><i class="bi bi-skype"></i></a>
+        <a href=""><i class="bi bi-linkedin"></i></a>
+      </div>
+      <div class="container">
+        <div class="copyright">
+          <span>Copyright</span> <strong class="px-1 sitename">PerabotiQ</strong> <span>All Rights Reserved</span>
+        </div>
+        <div class="credits">
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

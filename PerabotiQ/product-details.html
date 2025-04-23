@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Product Details</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+
+</head>
+
+<body class="product-details-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+      
+      <a href="index.html" class="logo d-flex align-items-center">
+        <h1 class="sitename">PerabotiQ</h1>
+      </a>
+  
+      <!-- NAV TOGGLE - Checkbox Hack -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle d-xl-none">
+      <label for="nav-toggle" class="mobile-nav-toggle d-xl-none">
+        <i class="bi bi-list"></i>
+      </label>
+  
+      <!-- NAV MENU -->
+      <nav id="navmenu">
+        <ul class="navmenu">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#products">Products</a></li>
+        </ul>
+      </nav>
+  
+      <!-- RIGHT BUTTONS -->
+      <div class="d-flex gap-2 align-items-center">
+        <button class="btn btn-outline-light" title="Search"><i class="bi bi-search"></i></button>
+  
+        <!-- PROFILE DROPDOWN BUTTON -->
+        <div class="profile-wrapper position-relative">
+          <button class="btn btn-outline-light" title="Profile" onclick="toggleProfileDropdown()">
+            <i class="bi bi-person-circle"></i>
+          </button>
+  
+          <!-- Dropdown -->
+          <div class="profile-dropdown" id="profileDropdown">
+            <div class="arrow-up"></div>
+            <div class="dropdown-content">
+              <a href="login.html">Sign in</a>
+              <a href="register.html">Create Account</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </header>
+  >
+
+  <main class="main">
+
+    <div style="height: 100px;"></div>
+
+    <!-- Page Title -->
+    <div class="page-title dark-background">
+      <div class="container position-relative">
+      </div>
+    </div><!-- End Page Title -->
+
+
+  
+    <!-- Product Details Section -->
+    <section id="product-detail" class="product-detail section">
+      <div class="container">
+        <div class="row align-items-start">
+    
+          <!-- Gambar Produk -->
+          <div class="col-lg-6" data-aos="fade-right">
+            <img src="https://i5.walmartimages.com/asr/03bef5ec-086a-47db-99ab-42d3181c7b65.eeb44f06469cc743d16805b64cc0e199.jpeg" alt="VIMLE SOFA" class="img-fluid rounded shadow-sm">
+          </div>
+    
+          <!-- Detail Produk -->
+          <div class="col-lg-6 mt-4 mt-lg-0" data-aos="fade-left">
+            <h2 class="fw-bold">VIMLE SOFA</h2>
+            <h5 class="text-muted mb-3">3-seat sofa, Gunnared medium grey</h5>
+    
+            <p><strong>Product details :</strong></p>
+            <p>
+              Sofa empuk ini akan bertahan lama karena bantalannya diisi dengan busa berketahanan tinggi yang memberikan dukungan yang baik untuk tubuh Anda dan dengan cepat kembali ke bentuk aslinya saat Anda berdiri.
+            </p>
+            <p>
+              Sarung ini terbuat dari kain Gunnared yang diwarnai dengan pewarna sintetis dalam poliester. Ini adalah kain tahan lama dengan nuansa seperti wol, tampilan yang hangat, dan efek melange dua warna. Sarung mudah dibersihkan karena dapat dilepas dan dicuci dengan mesin.
+            </p>
+    
+            <!-- Pilihan Warna -->
+            <div class="mb-3">
+              <label for="warna" class="form-label fw-semibold">Warna</label>
+              <select id="warna" class="form-select w-auto">
+                <option selected>Grey</option>
+                <option>Blue</option>
+                <option>Beige</option>
+              </select>
+            </div>
+    
+            <!-- Atur Jumlah -->
+            <div class="mb-3 d-flex align-items-center gap-3">
+              <label class="form-label fw-semibold mb-0">Atur Jumlah</label>
+              <button class="btn btn-outline-secondary btn-sm rounded-circle" onclick="kurangiJumlah()">-</button>
+              <span id="jumlah" class="px-2">1</span>
+              <button class="btn btn-outline-secondary btn-sm rounded-circle" onclick="tambahJumlah()">+</button>
+            </div>
+    
+            <!-- Harga -->
+            <p class="fw-semibold fs-5 mt-3">Subtotal Pembelian : <span id="subtotal">Rp3.000.000</span></p>
+    
+            <!-- Tombol Add to Cart -->
+            <button class="btn btn-primary px-4 py-2 rounded-pill" style="background-color: #C18888; border: none;">
+              Add to cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Script untuk tombol jumlah -->
+
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+    <div class="container">
+      <h3 class="sitename">Selecao</h3>
+      <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p>
+      <div class="social-links d-flex justify-content-center">
+        <a href=""><i class="bi bi-twitter-x"></i></a>
+        <a href=""><i class="bi bi-facebook"></i></a>
+        <a href=""><i class="bi bi-instagram"></i></a>
+        <a href=""><i class="bi bi-skype"></i></a>
+        <a href=""><i class="bi bi-linkedin"></i></a>
+      </div>
+      <div class="container">
+        <div class="copyright">
+          <span>Copyright</span> <strong class="px-1 sitename">Selecao</strong> <span>All Rights Reserved</span>
+        </div>
+        <div class="credits">
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

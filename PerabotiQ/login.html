@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Product Details</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+
+</head>
+
+<body class="product-details-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+      
+      <a href="index.html" class="logo d-flex align-items-center">
+        <h1 class="sitename">PerabotiQ</h1>
+      </a>
+  
+      <!-- NAV TOGGLE - Checkbox Hack -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle d-xl-none">
+      <label for="nav-toggle" class="mobile-nav-toggle d-xl-none">
+        <i class="bi bi-list"></i>
+      </label>
+  
+      <!-- NAV MENU -->
+      <nav id="navmenu">
+        <ul class="navmenu">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#products">Products</a></li>
+        </ul>
+      </nav>
+  
+      <!-- RIGHT BUTTONS -->
+      <div class="d-flex gap-2 align-items-center">
+        <button class="btn btn-outline-light" title="Search"><i class="bi bi-search"></i></button>
+  
+        <!-- PROFILE DROPDOWN BUTTON -->
+        <div class="profile-wrapper position-relative">
+          <button class="btn btn-outline-light" title="Profile" onclick="toggleProfileDropdown()">
+            <i class="bi bi-person-circle"></i>
+          </button>
+  
+          <!-- Dropdown -->
+          <div class="profile-dropdown" id="profileDropdown">
+            <div class="arrow-up"></div>
+            <div class="dropdown-content">
+              <a href="login.html">Sign in</a>
+              <a href="register.html">Create Account</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </header>
+  
+
+  <main class="main">
+
+
+    <!-- Page Title -->
+    <div class="page-title dark-background">
+      <div class="container position-relative">
+      </div>
+    </div><!-- End Page Title -->
+
+
+  
+    <main class="main">
+        <section class="login-page d-flex w-100">
+            <!-- Left Panel -->
+            <div class="login-left flex-fill d-none d-md-block"></div>
+      
+            <!-- Right Panel -->
+            <div class="login-right flex-fill d-flex align-items-center justify-content-center">
+              <div class="login-form-container p-4 p-md-5">
+                <h2 class="text-center fw-bold mb-4" style="font-family: 'Poppins', sans-serif;">Hey, Welcome Back</h2>
+                <p class="mb-4">Sign in into your account</p>
+                <form action="index.html">
+                  <div class="form-group mb-3">
+                    <label for="email" class="form-label">E-mail/Cell Number</label>
+                    <input type="text" class="form-control input-custom" id="email">
+                  </div>
+                  <div class="form-group mb-2">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control input-custom" id="password">
+                  </div>
+                  <div class="mb-4">
+                    <a href="#" class="text-decoration-none small text-forgot">forgot password?</a>
+                  </div>
+                  <div class="d-grid mb-2">
+                    <button type="submit" class="btn btn-login fw-bold">Sign In</button>
+                  </div>
+                  <div class="text-center mb-2">or</div>
+                  <div class="d-grid">
+                    <a href="register.html" class="btn btn-create fw-bold">Create Account</a>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </section>
+    </main>
+      
+
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+    <div class="container">
+      <h3 class="sitename">Selecao</h3>
+      <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p>
+      <div class="social-links d-flex justify-content-center">
+        <a href=""><i class="bi bi-twitter-x"></i></a>
+        <a href=""><i class="bi bi-facebook"></i></a>
+        <a href=""><i class="bi bi-instagram"></i></a>
+        <a href=""><i class="bi bi-skype"></i></a>
+        <a href=""><i class="bi bi-linkedin"></i></a>
+      </div>
+      <div class="container">
+        <div class="copyright">
+          <span>Copyright</span> <strong class="px-1 sitename">Selecao</strong> <span>All Rights Reserved</span>
+        </div>
+        <div class="credits">
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

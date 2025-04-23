@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Product Details</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+
+</head>
+
+<body class="product-details-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+      
+      <a href="index.html" class="logo d-flex align-items-center">
+        <h1 class="sitename">PerabotiQ</h1>
+      </a>
+  
+      <!-- NAV TOGGLE - Checkbox Hack -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle d-xl-none">
+      <label for="nav-toggle" class="mobile-nav-toggle d-xl-none">
+        <i class="bi bi-list"></i>
+      </label>
+  
+      <!-- NAV MENU -->
+      <nav id="navmenu">
+        <ul class="navmenu">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#products">Products</a></li>
+        </ul>
+      </nav>
+  
+      <!-- RIGHT BUTTONS -->
+      <div class="d-flex gap-2 align-items-center">
+        <button class="btn btn-outline-light" title="Search"><i class="bi bi-search"></i></button>
+  
+        <!-- PROFILE DROPDOWN BUTTON -->
+        <div class="profile-wrapper position-relative">
+          <button class="btn btn-outline-light" title="Profile" onclick="toggleProfileDropdown()">
+            <i class="bi bi-person-circle"></i>
+          </button>
+  
+          <!-- Dropdown -->
+          <div class="profile-dropdown" id="profileDropdown">
+            <div class="arrow-up"></div>
+            <div class="dropdown-content">
+              <a href="login.html">Sign in</a>
+              <a href="register.html">Create Account</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </header>
+  >
+
+  <main class="main pt-5">
+    <div style="height: 20px;"></div>
+  
+    <!-- Judul Halaman -->
+    <div class="container mb-4">
+      <h2 class="fw-bold">Ruang Tamu</h2>
+    </div>
+  
+    <!-- Daftar Produk -->
+    <div class="container">
+      <div class="row g-4">
+        <!-- Produk 1 -->
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card shadow-sm product-card">
+            <img src="assets/img/vimle.jpg" class="card-img-top" alt="VIMLE SOFA">
+            <div class="card-body">
+              <h6 class="fw-bold mb-1">VIMLE SOFA</h6>
+              <p class="mb-1 text-muted">Rp.3.000.000</p>
+              <div class="text-warning">★★★★★</div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Produk 2 -->
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card shadow-sm product-card">
+            <img src="assets/img/smedstorp.jpg" class="card-img-top" alt="SMEDSTORP">
+            <div class="card-body">
+              <h6 class="fw-bold mb-1">SMEDSTORP</h6>
+              <p class="mb-1 text-muted">Rp.2.700.000</p>
+              <div class="text-warning">★★★★★</div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Produk 3 -->
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card shadow-sm product-card">
+            <img src="assets/img/langaryd.jpg" class="card-img-top" alt="LANGARYD">
+            <div class="card-body">
+              <h6 class="fw-bold mb-1">LANGARYD</h6>
+              <p class="mb-1 text-muted">Rp.3.200.000</p>
+              <div class="text-warning">★★★★★</div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Produk 4 -->
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card shadow-sm product-card">
+            <img src="assets/img/vimle2.jpg" class="card-img-top" alt="VIMLE">
+            <div class="card-body">
+              <h6 class="fw-bold mb-1">VIMLE</h6>
+              <p class="mb-1 text-muted">Rp.4.000.000</p>
+              <div class="text-warning">★★★★☆</div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Produk 5 -->
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card shadow-sm product-card">
+            <img src="assets/img/tornsborg.jpg" class="card-img-top" alt="TORNSBORG">
+            <div class="card-body">
+              <h6 class="fw-bold mb-1">TORNSBORG</h6>
+              <p class="mb-1 text-muted">Rp.2.100.000</p>
+              <div class="text-warning">★★★★★</div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Produk 6 -->
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card shadow-sm product-card">
+            <img src="assets/img/landskorna.jpg" class="card-img-top" alt="LANDSKORNA">
+            <div class="card-body">
+              <h6 class="fw-bold mb-1">LANDSKORNA</h6>
+              <p class="mb-1 text-muted">Rp.2.200.000</p>
+              <div class="text-warning">★★★★☆</div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Produk 7 -->
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card shadow-sm product-card">
+            <img src="assets/img/stockholm.jpg" class="card-img-top" alt="STOCKHOLM">
+            <div class="card-body">
+              <h6 class="fw-bold mb-1">STOCKHOLM</h6>
+              <p class="mb-1 text-muted">Rp.700.000</p>
+              <div class="text-warning">★★★★★</div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Produk 8 -->
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card shadow-sm product-card">
+            <img src="assets/img/lart.jpg" class="card-img-top" alt="LART">
+            <div class="card-body">
+              <h6 class="fw-bold mb-1">LART</h6>
+              <p class="mb-1 text-muted">Rp.500.000</p>
+              <div class="text-warning">★★★★☆</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+
+  <footer id="footer" class="footer dark-background">
+    <div class="container">
+      <h3 class="sitename">Selecao</h3>
+      <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p>
+      <div class="social-links d-flex justify-content-center">
+        <a href=""><i class="bi bi-twitter-x"></i></a>
+        <a href=""><i class="bi bi-facebook"></i></a>
+        <a href=""><i class="bi bi-instagram"></i></a>
+        <a href=""><i class="bi bi-skype"></i></a>
+        <a href=""><i class="bi bi-linkedin"></i></a>
+      </div>
+      <div class="container">
+        <div class="copyright">
+          <span>Copyright</span> <strong class="px-1 sitename">Selecao</strong> <span>All Rights Reserved</span>
+        </div>
+        <div class="credits">
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
