@@ -1,11 +1,5 @@
-
-
 (function() {
   "use strict";
-
-  /**
-   * Apply .scrolled class to the body as the page is scrolled down
-   */
   function toggleScrolled() {
     const selectBody = document.querySelector('body');
     const selectHeader = document.querySelector('#header');
@@ -35,7 +29,7 @@
     if (scrollTop) {
       window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
     }
-  }
+  }  
   scrollTop.addEventListener('click', (e) => {
     e.preventDefault();
     window.scrollTo({
@@ -46,6 +40,33 @@
 
   window.addEventListener('load', toggleScrollTop);
   document.addEventListener('scroll', toggleScrollTop);
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const searchToggle = document.getElementById('searchToggle');
+    const searchContainer = document.querySelector('.search-container');
+    const searchInput = document.getElementById('searchInput');
+  
+    // Toggle input pencarian
+    searchToggle.addEventListener('click', function (e) {
+      e.stopPropagation();
+      searchContainer.classList.toggle('active');
+      if (searchContainer.classList.contains('active')) {
+        searchInput.focus();
+      } else {
+        searchInput.blur();
+      }
+    });
+  
+    // Tutup saat klik di luar input
+    document.addEventListener('click', function (e) {
+      if (!searchContainer.contains(e.target)) {
+        searchContainer.classList.remove('active');
+      }
+    });
+  });
+  
+
+
 
   /**
    * Animation on scroll function and init
@@ -101,6 +122,67 @@
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
 
+  document.addEventListener('DOMContentLoaded', () => {
+  const selectAll = document.getElementById('selectAll');
+  const cartItemsContainer = document.getElementById('cart-items');
+  const itemChecks = () => cartItemsContainer.querySelectorAll('.item-check');
+  const totalPriceEl = document.getElementById('total-price');
+  const itemCountEl = document.getElementById('item-count');
+  const emptyCartEl = document.querySelector('.empty-cart');
+
+  function updateSummary() {
+    let total = 0, count = 0;
+    const items = cartItemsContainer.querySelectorAll('.cart-item');
+
+    items.forEach(item => {
+      const cb = item.querySelector('.item-check');
+      const qty = parseInt(item.querySelector('.quantity').value);
+      const price = parseInt(item.dataset.price);
+      if (cb.checked) {
+        total += price * qty;
+        count++;
+      }
+    });
+
+    totalPriceEl.textContent = total.toLocaleString('id-ID');
+    itemCountEl.textContent = count;
+
+    // Tampilkan pesan kosong
+    emptyCartEl.classList.toggle('d-none', items.length > 0);
+  }
+
+  cartItemsContainer.addEventListener('click', e => {
+    let btn;
+    if (e.target.matches('.increase, .increase *')) {
+      btn = e.target.closest('.increase');
+      const qty = btn.previousElementSibling;
+      qty.value = parseInt(qty.value) + 1;
+      updateSummary();
+    }
+    if (e.target.matches('.decrease, .decrease *')) {
+      btn = e.target.closest('.decrease');
+      const qty = btn.nextElementSibling;
+      if (parseInt(qty.value) > 1) qty.value = parseInt(qty.value) - 1;
+      updateSummary();
+    }
+    if (e.target.matches('.delete, .delete *')) {
+      btn = e.target.closest('.delete');
+      btn.closest('.cart-item').remove();
+      updateSummary();
+    }
+  });
+
+  cartItemsContainer.addEventListener('change', e => {
+    if (e.target.matches('.item-check')) updateSummary();
+  });
+
+  selectAll.addEventListener('change', () => {
+    itemChecks().forEach(cb => cb.checked = selectAll.checked);
+    updateSummary();
+  });
+
+  updateSummary();
+});
 
   let jumlah = 1;
   const harga = 3000000;
@@ -138,6 +220,22 @@
       dropdown.style.display = 'none';
     }
   });
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const container = document.querySelector('.slider-container');
+    const next = document.getElementById('nextBtn');
+    const prev = document.getElementById('prevBtn');
+  
+    next.addEventListener('click', () => {
+      container.scrollBy({ left: 300, behavior: 'smooth' });
+    });
+  
+    prev.addEventListener('click', () => {
+      container.scrollBy({ left: -300, behavior: 'smooth' });
+    });
+  });
+
+
 
 
 })();

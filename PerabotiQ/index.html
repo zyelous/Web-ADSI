@@ -6,11 +6,13 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Index</title>
 
-
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+ 
+ <!--aos-->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -47,22 +49,27 @@
       </nav>
   
       <!-- RIGHT BUTTONS -->
-      <div class="d-flex gap-2 align-items-center">
-        <button class="btn btn-outline-light" title="Search"><i class="bi bi-search"></i></button>
-  
-        <!-- PROFILE DROPDOWN BUTTON -->
-        <div class="profile-wrapper position-relative">
-          <button class="btn btn-outline-light" title="Profile" onclick="toggleProfileDropdown()">
-            <i class="bi bi-person-circle"></i>
+      <div class="search-container">
+        <input type="text" id="searchInput" class="search-input" placeholder="Cari produk..." />
+
+        <div class="d-flex gap-2 align-items-center">
+          <button id="searchToggle" class="btn btn-outline-light" title="Search">
+            <i class="bi bi-search"></i>
           </button>
   
-          <!-- Dropdown -->
-          <div class="profile-dropdown" id="profileDropdown">
-            <div class="arrow-up"></div>
-            <div class="dropdown-content">
-              <a href="login.html">Sign in</a>
-              <a href="register.html">Create Account</a>
-            </div>
+          <!-- PROFILE DROPDOWN BUTTON -->
+          <div class="profile-wrapper position-relative">
+            <button class="btn btn-outline-light" title="Profile" onclick="toggleProfileDropdown()">
+              <i class="bi bi-person-circle"></i>
+            </button>
+  
+            <!-- Dropdown -->
+            <div class="profile-dropdown" id="profileDropdown">
+              <div class="arrow-up"></div>
+              <div class="dropdown-content">
+                <a href="login.html">Sign in</a>
+                <a href="register.html">Create Account</a>
+              </div>
           </div>
         </div>
       </div>
@@ -78,27 +85,26 @@
       <div id="hero-carousel" data-bs-interval="5000" class="container-fluid carousel carousel-fade" data-bs-ride="carousel">
 
         <!-- Slide 1 -->
-        <div class="carousel-item active" style="background-image: url('https://www.bassettfurniture.com/on/demandware.static/-/Sites-bassett-Library/default/dwd3e7a906/2676-LSECTA-Beckham-FA21.jpeg');">
+        <div class="carousel-item active" style="background-image: url(https://www.pixelstalk.net/wp-content/uploads/images1/Free-furniture-wallpapers.jpg);">
           <div class="carousel-container">
-            <h2 class="animate__animated animate__fadeInDown" style="color: brown;">Welcome to <span>PerabotiQ</span></h2>
-            <p class="animate__animated animate__fadeInUp" style="color: brown;">Perabot berkualitas untuk setiap ruangan</p>
-            <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+            <h2 class="animate__animated animate__fadeInDown" style="color: white;">Welcome to <span>PerabotiQ</span></h2>
+            <p class="animate__animated animate__fadeInUp" style="color: white;">Perabot berkualitas untuk setiap ruangan</p>
           </div>
         </div>
 
         <!-- Slide 2 -->
-        <div class="carousel-item" style="background-image: url('https://events.rumah123.com/wp-content/uploads/sites/38/2021/07/07043141/Furniture-Kamar-Tidur1.png');">
+        <div class="carousel-item" style="background-image: url('https://cdn.wallpapersafari.com/45/58/kQX2HB.jpg');">
           <div class="carousel-container">
-            <h2 class="animate__animated animate__fadeInDown" style="color: brown;">Ruang Tidur Impian</h2>
-            <p class="animate__animated animate__fadeInUp" style="color: brown;">Nyaman dan modern, temukan inspirasi desain terbaik untuk ruang tidur Anda.</p>
+            <h2 class="animate__animated animate__fadeInDown" style="color: black;">Ruang Tidur Impian</h2>
+            <p class="animate__animated animate__fadeInUp" style="color: black;">Nyaman dan modern, temukan inspirasi desain terbaik untuk ruang tidur Anda.</p>
           </div>
         </div>
 
         <!-- Slide 3 -->
-        <div class="carousel-item" style="background-image: url('https://th.bing.com/th/id/R.9000e8e0a9f51c62ff3314a33d305f6c?rik=EeKPqMJKtCWHiw&riu=http%3a%2f%2fdekorrumah.net%2fwp-content%2fuploads%2f2016%2f12%2fModel-Ruang-Makan-Minimalis-Menyatu-Dengan-Dapur-2017.jpg&ehk=893znDNE2%2bBx8AJkP%2bBatFy7MfXlhezK9NfMNWF6st4%3d&risl=&pid=ImgRaw&r=0');">
+        <div class="carousel-item" style="background-image: url('https://wallpaperaccess.com/full/2076125.jpg');">
           <div class="carousel-container">
-            <h2 class="animate__animated animate__fadeInDown">Gaya Minimalis Modern</h2>
-            <p class="animate__animated animate__fadeInUp">Desain ruang makan dengan sentuhan minimalis dan elegan.</p>
+            <h2 class="animate__animated animate__fadeInDown" style="color: white;">Gaya Minimalis Modern</h2>
+            <p class="animate__animated animate__fadeInUp" style="color: white;">Desain ruang makan dengan sentuhan minimalis dan elegan.</p>
           </div>
         </div>
 
@@ -132,19 +138,17 @@
 
           <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
+              PrabotiQ adalah platform e-commerce terpercaya yang menyediakan berbagai macam perabotan rumah tangga dengan desain modern dan kualitas terbaik. Kami hadir untuk membantu Anda menciptakan ruang hunian yang nyaman dan estetik.
             </p>
             <ul>
-              <li><i class="bi bi-check2-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></li>
-              <li><i class="bi bi-check2-circle"></i> <span>Duis aute irure dolor in reprehenderit in voluptate velit.</span></li>
-              <li><i class="bi bi-check2-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo</span></li>
+              <li><i class="bi bi-check2-circle"></i> <span>Produk berkualitas dengan harga bersaing.</span></li>
+              <li><i class="bi bi-check2-circle"></i> <span>Desain kekinian dan beragam pilihan gaya.</span></li>
+              <li><i class="bi bi-check2-circle"></i> <span>Layanan pengiriman cepat dan aman.</span></li>
             </ul>
           </div>
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <p>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
-            <a href="#" class="read-more"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+            <p>Kami berkomitmen memberikan pengalaman belanja yang mudah, cepat, dan memuaskan. Temukan inspirasi perabotan untuk setiap sudut rumah Anda hanya di PrabotiQ.</p>
           </div>
 
         </div>
@@ -152,9 +156,6 @@
       </div>
 
     </section><!-- /About Section -->
-
-    
-    <section id="products" class="products section">
 
     <!-- Products Section -->
     <section id="products" class="products section">
@@ -170,55 +171,62 @@
           <!-- Product 1 -->
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <div class="product-item position-relative p-0 overflow-hidden">
-              <a href="product-details.html">
-                <img src="https://ilhamdekorasi.my/wp-content/uploads/2020/09/12.jpg" alt="Product 1" class="product-img">
+              <a href="ruang-tamu.html">
+                <img src="https://p4.wallpaperbetter.com/wallpaper/274/668/983/fabulous-living-room-living-room-set-wallpaper-preview.jpg" alt="Product 1" class="product-img">
               </a>
             </div>
+            <p class="mt-2 fw-semibold text-left">Ruang Tamu</p>
           </div>
+          
 
            <!-- Product 2 -->
-           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
             <div class="product-item position-relative p-0 overflow-hidden">
-              <a href="product-details.html">
-                <img src="https://ilhamdekorasi.my/wp-content/uploads/2020/09/12.jpg" alt="Product 1" class="product-img">
+              <a href="ruang-tidur.html">
+                <img src="https://4.bp.blogspot.com/-9DENORtzjAY/WSkxS07HpmI/AAAAAAAAAvk/ZDigDqEydZEu5Tj1Vb8g7QXOSykMvWxZQCLcB/s1600/Desain%2BKamar%2BTidur%2BUtama%2BMinimalis%2BUkuran%2B3x4.jpg" alt="Product 1" class="product-img">
               </a>
             </div>
+            <p class="mt-2 fw-semibold text-left">Ruang Tidur</p>
           </div>
 
           <!-- Product 3 -->
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
             <div class="product-item position-relative p-0 overflow-hidden">
-              <a href="product-details.html">
-                <img src="https://m.media-amazon.com/images/I/81CUTFDpwIL.jpg" alt="Product 3" class="product-img">
+              <a href="ruang-makan.html">
+                <img src="https://i.pinimg.com/originals/ee/89/74/ee8974954744d6347a404b45e10d35ea.png"  alt="Product 3" class="product-img">
               </a>
             </div>
+            <p class="mt-2 fw-semibold text-left">Ruang Makan</p>
           </div>
 
           <!-- Product 4 -->
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
             <div class="product-item position-relative p-0 overflow-hidden">
-              <a href="product-details.html">
-                <img src="https://m.media-amazon.com/images/I/81CUTFDpwIL.jpg" alt="Product 4" class="product-img">
+              <a href="ruang-kerja.html">
+                <img src="https://d3p0bla3numw14.cloudfront.net/news-content/img/2021/08/02173644/Ruang-Kerja-Minimalis-di-Sudut-Ruangan.jpg" alt="Product 4" class="product-img">
               </a>
             </div>
+            <p class="mt-2 fw-semibold text-left">Ruang Kerja</p>
           </div>
 
           <!-- Product 5 -->
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
             <div class="product-item position-relative p-0 overflow-hidden">
-              <a href="product-details.html">
-                <img src="https://m.media-amazon.com/images/I/81CUTFDpwIL.jpg" alt="Product 5" class="product-img">
+              <a href="kamar-mandi.html">
+                <img src="https://1.bp.blogspot.com/-BVaruwh-vG8/Vqm5qBicKaI/AAAAAAAAAVY/MOJVzOuYgI4/s1600/Interior%2BKamar%2BMandi.jpg" alt="Product 5" class="product-img">
               </a>
             </div>
+            <p class="mt-2 fw-semibold text-left">Kamar mandi</p>
           </div>
 
           <!-- Product 6 -->
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
             <div class="product-item position-relative p-0 overflow-hidden">
-              <a href="product-details.html">
-                <img src="https://m.media-amazon.com/images/I/81CUTFDpwIL.jpg" alt="Product 6" class="product-img">
+              <a href="aksesoris.html">
+                <img src="https://ds393qgzrxwzn.cloudfront.net/cat1/img/images/0/USU5Nx4RlN.jpg" alt="Product 6" class="product-img">
               </a>
             </div>
+            <p class="mt-2 fw-semibold text-left">Aksesoris</p>
           </div>
 
         </div>
@@ -226,26 +234,102 @@
     </section>
 
 
-  <footer id="footer" class="footer dark-background">
-    <div class="container">
-      <h3 class="sitename">PerabotiQ</h3>
-      <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p>
-      <div class="social-links d-flex justify-content-center">
-        <a href=""><i class="bi bi-twitter-x"></i></a>
-        <a href=""><i class="bi bi-facebook"></i></a>
-        <a href=""><i class="bi bi-instagram"></i></a>
-        <a href=""><i class="bi bi-skype"></i></a>
-        <a href=""><i class="bi bi-linkedin"></i></a>
-      </div>
-      <div class="container">
-        <div class="copyright">
-          <span>Copyright</span> <strong class="px-1 sitename">PerabotiQ</strong> <span>All Rights Reserved</span>
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="footer-section">
+          <h4><i class="bi bi-box-seam"></i> Orders</h4>
+          <p>Find out when your purchase will arrive or schedule a delivery.</p>
+          <a href="#">Track Order</a> | <a href="#">Schedule Delivery</a>
         </div>
-        <div class="credits">
+        <div class="footer-section">
+          <h4><i class="bi bi-chat-dots"></i> Contact Us & Store Locator</h4>
+          <p>Questions? Text us: <a href="tel:+13127791979">(312) 779-1979</a></p>
+          <a href="#">Chat With Us</a> | <a href="#">Leave Feedback</a> | <a href="#">Find a Store</a>
+        </div>
+        <div class="footer-section">
+          <h4><i class="bi bi-credit-card"></i> Credit Card</h4>
+          <p>Earn Reward Dollars every time you shop*</p>
+          <a href="#">Apply Now</a> | <a href="#">Manage Your Account</a>
+        </div>
+        <div class="footer-section">
+          <h4><i class="bi bi-phone"></i> Our iOS App</h4>
+          <p>Scan to shop exclusive first looks, get alerts & manage registry easier.</p>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/8/8d/Qr-1.png" alt="QR Code" class="qr-code">
+          <br>
+          <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store" class="app-store">
         </div>
       </div>
-    </div>
-  </footer>
+    
+      <hr>
+    
+      <div class="footer-links">
+        <div class="column">
+          <h5>Help</h5>
+          <ul>
+            <li><a href="#">Customer Service</a></li>
+            <li><a href="#">Account</a></li>
+            <li><a href="#">Return Policy</a></li>
+            <li><a href="#">Shipping Info</a></li>
+            <li><a href="#">Product Recalls</a></li>
+            <li><a href="#">Email & Text Preferences</a></li>
+            <li><a href="#">Sign Up for Texts</a></li>
+          </ul>
+        </div>
+        <div class="column">
+          <h5>Resources</h5>
+          <ul>
+            <li><a href="#">Free Design Services</a></li>
+            <li><a href="#">Wedding Registry</a></li>
+            <li><a href="#">Baby Registry</a></li>
+            <li><a href="#">Gift Cards</a></li>
+            <li><a href="#">Catalogs</a></li>
+            <li><a href="#">Trade Program</a></li>
+            <li><a href="#">Contract Grade Furniture</a></li>
+          </ul>
+        </div>
+        <div class="column">
+          <h5>Our Company</h5>
+          <ul>
+            <li><a href="#">About Us</a></li>
+          </ul>
+        </div>
+        <div class="column">
+          <h5>Follow Us</h5>
+          <a href="#">#CrateStyleYourHome</a> 
+          <div class="social-icons">
+            <i class="bi bi-instagram"></i>
+            <i class="bi bi-tiktok"></i>
+            <i class="bi bi-pinterest"></i>
+            <i class="bi bi-youtube"></i>
+            <i class="bi bi-facebook"></i>
+          </div>
+          <h5>Our Brands</h5>
+          <div class="brands">
+            <span>Crate&Barrel</span>
+            <span>Crate&kids</span>
+            <span>CB2</span>
+            <span>HUDSON</span>
+            <span>GRACE</span>
+          </div>
+        </div>
+      </div>
+    
+      <hr>
+    
+      <div class="footer-bottom">
+        <div class="legal-links">
+          <a href="#">Terms of Use</a>
+          <a href="#">Privacy</a>
+          <a href="#">Site Index</a>
+          <a href="#">Ad Choices</a>
+          <a href="#">Cookie Settings</a>
+          <a href="#">CA Supply Chains Act</a>
+          <a href="#">Do Not Sell My Info</a>
+        </div>
+        <p>&copy;2025 All rights reserved.</p>
+      </div>
+    </footer>
+    
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
@@ -257,6 +341,7 @@
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Main JS File -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script src="assets/js/main.js"></script>
 
 </body>
