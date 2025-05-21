@@ -236,6 +236,21 @@
   });
 
 
+  document.addEventListener('DOMContentLoaded', function() {
+    const statusButtons = document.querySelectorAll('.status-buttons button');
+
+    statusButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            statusButtons.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
+
+    const shopButton = document.querySelector('.empty-state button');
+    shopButton.addEventListener('click', function() {
+        alert('Belanja Sekarang!');
+    });
+});
 
 
 })();

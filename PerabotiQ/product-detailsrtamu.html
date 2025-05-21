@@ -54,6 +54,8 @@
           <button id="searchToggle" class="btn btn-outline-light" title="Search">
             <i class="bi bi-search"></i>
           </button>
+        
+
   
           <!-- PROFILE DROPDOWN BUTTON -->
           <div class="profile-wrapper position-relative">
@@ -76,215 +78,152 @@
   </header>
   >
 
-  <main class="main pt-5">
-    <div style="height: 20px;"></div>
+  <main class="main">
+
+    <div style="height: 100px;"></div>
+
+    <!-- Page Title -->
+    <div class="page-title dark-background">
+      <div class="container position-relative">
+      </div>
+    </div><!-- End Page Title -->
+
+
   
-    <!-- Judul Halaman -->
-    <div class="container mb-4">
-      <h2 class="fw-bold">Ruang Tamu</h2>
-    </div>
-  
-    <!-- Daftar Produk -->
-    <div class="container">
-      <div class="row g-4">
-        <!-- Produk 1 -->
-        <div class="col-6 col-md-4 col-lg-3">
-          <div class="card shadow-sm product-card">
-            <a href="product-details.html">
-              <img src="assets/img/vimlesofa.jpg" class="card-img-top" alt="VIMLE SOFA">
-            </a>  
-            <div class="card-body">
-              <h6 class="fw-bold mb-1">VIMLE SOFA</h6>
-              <p class="mb-1 text-muted">Rp.3.000.000</p>
-              <div class="text-warning">★★★★★</div>
+    <!-- Product Details Section -->
+    <section id="product-detail" class="product-detail section">
+      <div class="container">
+        <div class="row align-items-start">
+    
+          <!-- Gambar Produk -->
+          <div class="col-lg-6" data-aos="fade-right">
+             <img src="assets/img/KIVIK.png" alt="VIMLE SOFA" class="img-fluid rounded shadow-sm">
+          </div>
+    
+          <!-- Detail Produk -->
+          <div class="col-lg-6 mt-4 mt-lg-0" data-aos="fade-left">
+            <h2 class="fw-bold">VIMLE SOFA</h2>
+            <h5 class="text-muted mb-3">3-seat sofa, Gunnared medium grey</h5>
+    
+            <p><strong>Product details :</strong></p>
+            <p>
+              Sofa empuk ini akan bertahan lama karena bantalannya diisi dengan busa berketahanan tinggi yang memberikan dukungan yang baik untuk tubuh Anda dan dengan cepat kembali ke bentuk aslinya saat Anda berdiri.
+            </p>
+            <p>
+              Sarung ini terbuat dari kain Gunnared yang diwarnai dengan pewarna sintetis dalam poliester. Ini adalah kain tahan lama dengan nuansa seperti wol, tampilan yang hangat, dan efek melange dua warna. Sarung mudah dibersihkan karena dapat dilepas dan dicuci dengan mesin.
+            </p>
+    
+            <!-- Pilihan Warna -->
+            <div class="mb-3">
+              <label for="warna" class="form-label fw-semibold">Warna</label>
+              <select id="warna" class="form-select w-auto">
+                <option selected>Grey</option>
+                <option>Blue</option>
+                <option>Beige</option>
+              </select>
             </div>
+    
+            <!-- Atur Jumlah -->
+            <div class="mb-3 d-flex align-items-center gap-3">
+              <label class="form-label fw-semibold mb-0">Atur Jumlah</label>
+              <button class="btn btn-outline-secondary btn-sm rounded-circle" onclick="kurangiJumlah()">-</button>
+              <span id="jumlah" class="px-2">1</span>
+              <button class="btn btn-outline-secondary btn-sm rounded-circle" onclick="tambahJumlah()">+</button>
+            </div>
+    
+            <!-- Harga -->
+            <p class="fw-semibold fs-5 mt-3">Subtotal Pembelian : <span id="subtotal">Rp3.000.000</span></p>
+    
+            <!-- Tombol Add to Cart -->
+            <button class="btn btn-primary px-4 py-2 rounded-pill" style="background-color: #C18888; border: none;">
+              Add to cart
+            </button>
           </div>
         </div>
-  
-        <!-- Produk 2 -->
-        <div class="col-6 col-md-4 col-lg-3">
-          <div class="card shadow-sm product-card">
-            <img src="assets/img/smedstorp.jpg" class="card-img-top" alt="SMEDSTORP">
+      </div>
+    </section>
+
+    <!-- Script untuk tombol jumlah -->
+
+  <!-- You May Also Like Section (with Slider) -->
+<section class="related-products section py-5">
+  <div class="container position-relative">
+    <h3 class="fw-bold mb-4">You May Also Like</h3>
+
+    <!-- Navigasi kiri -->
+    <button class="btn btn-light position-absolute top-50 start-0 translate-middle-y z-3" id="prevBtn">&#8249;</button>
+
+    <!-- Navigasi kanan -->
+    <button class="btn btn-light position-absolute top-50 end-0 translate-middle-y z-3" id="nextBtn">&#8250;</button>
+
+    <!-- Track slider -->
+    <div class="slider-container overflow-hidden">
+      <div class="slider-track d-flex">
+        <div class="product-card me-3">
+          <div class="card h-100 border-0 shadow-sm text-center">
+            <img src="https://www.ikea.com/sg/en/images/products/gunnemor-throw-off-white-grey-beige__1033634_pe837371_s5.jpg?f=s" class="card-img-top" alt="GUNNEMOR">
             <div class="card-body">
-              <h6 class="fw-bold mb-1">SMEDSTORP</h6>
-              <p class="mb-1 text-muted">Rp.2.700.000</p>
-              <div class="text-warning">★★★★★</div>
-            </div>
-          </div>
-        </div>
-  
-        <!-- Produk 3 -->
-        <div class="col-6 col-md-4 col-lg-3">
-          <div class="card shadow-sm product-card">
-            <img src="assets/img/langyard.jpg" class="card-img-top" alt="LANGARYD">
-            <div class="card-body">
-              <h6 class="fw-bold mb-1">LANGARYD</h6>
-              <p class="mb-1 text-muted">Rp.3.200.000</p>
-              <div class="text-warning">★★★★★</div>
-            </div>
-          </div>
-        </div>
-  
-        <!-- Produk 4 -->
-        <div class="col-6 col-md-4 col-lg-3">
-          <div class="card shadow-sm product-card">
-            <img src="assets/img/vimle.jpg" class="card-img-top" alt="VIMLE">
-            <div class="card-body">
-              <h6 class="fw-bold mb-1">VIMLE</h6>
-              <p class="mb-1 text-muted">Rp.4.000.000</p>
-              <div class="text-warning">★★★★☆</div>
-            </div>
-          </div>
-        </div>
-  
-        <!-- Produk 5 -->
-        <div class="col-6 col-md-4 col-lg-3">
-          <div class="card shadow-sm product-card">
-            <img src="assets/img/tornsborg.jpg" class="card-img-top" alt="TORNSBORG">
-            <div class="card-body">
-              <h6 class="fw-bold mb-1">TORNSBORG</h6>
-              <p class="mb-1 text-muted">Rp.2.100.000</p>
-              <div class="text-warning">★★★★★</div>
-            </div>
-          </div>
-        </div>
-  
-        <!-- Produk 6 -->
-        <div class="col-6 col-md-4 col-lg-3">
-          <div class="card shadow-sm product-card">
-            <img src="assets/img/landskorna.jpg" class="card-img-top" alt="LANDSKORNA">
-            <div class="card-body">
-              <h6 class="fw-bold mb-1">LANDSKORNA</h6>
-              <p class="mb-1 text-muted">Rp.2.200.000</p>
-              <div class="text-warning">★★★★☆</div>
-            </div>
-          </div>
-        </div>
-  
-        <!-- Produk 7 -->
-        <div class="col-6 col-md-4 col-lg-3">
-          <div class="card shadow-sm product-card">
-            <img src="assets/img/stockholm.jpg" class="card-img-top" alt="STOCKHOLM">
-            <div class="card-body">
-              <h6 class="fw-bold mb-1">STOCKHOLM</h6>
-              <p class="mb-1 text-muted">Rp.700.000</p>
-              <div class="text-warning">★★★★★</div>
-            </div>
-          </div>
-        </div>
-  
-        <!-- Produk 8 -->
-        <div class="col-6 col-md-4 col-lg-3">
-          <div class="card shadow-sm product-card">
-            <img src="assets/img/lart.jpg" class="card-img-top" alt="LART">
-            <div class="card-body">
-              <h6 class="fw-bold mb-1">LART</h6>
-              <p class="mb-1 text-muted">Rp.500.000</p>
-              <div class="text-warning">★★★★☆</div>
+              <h6 class="card-title fw-bold">GUNNEMOR</h6>
+              <p class="mb-1">Rp.55.000</p>
             </div>
           </div>
         </div>
 
-        <div class="col-6 col-md-4 col-lg-3">
-          <div class="card shadow-sm product-card">
-            <img src="assets/img/POANG.png" class="card-img-top" alt="POANG">
+        <div class="product-card me-3">
+          <div class="card h-100 border-0 shadow-sm text-center">
+            <img src="https://www.ikea.com/sg/en/images/products/tasjoen-slippers-grey__0668754_pe714677_s5.jpg?f=s" class="card-img-top" alt="SLIPPERS">
             <div class="card-body">
-              <h6 class="fw-bold mb-1">POANG</h6>
-              <p class="mb-1 text-muted">Rp.1.400.000</p>
-              <div class="text-warning">★★★★★</div>
+              <h6 class="card-title fw-bold">SLIPPERS</h6>
+              <p class="mb-1">Rp.60.000</p>
             </div>
           </div>
         </div>
-  
-        <!-- Produk 2 -->
-        <div class="col-6 col-md-4 col-lg-3">
-          <div class="card shadow-sm product-card">
-            <img src="assets/img/HOLL.png" class="card-img-top" alt="HOLL">
+
+        <div class="product-card me-3">
+          <div class="card h-100 border-0 shadow-sm text-center">
+            <img src="https://www.ikea.com/sg/en/images/products/loensas-mirror__1383462_pe962566_s5.jpg?f=s" class="card-img-top" alt="LONSAS">
             <div class="card-body">
-              <h6 class="fw-bold mb-1">HOL</h6>
-              <p class="mb-1 text-muted">Rp.600.000</p>
-              <div class="text-warning">★★★★★</div>
+              <h6 class="card-title fw-bold">LONSAS</h6>
+              <p class="mb-1">Rp.110.000</p>
             </div>
           </div>
         </div>
-  
-        <!-- Produk 3 -->
-        <div class="col-6 col-md-4 col-lg-3">
-          <div class="card shadow-sm product-card">
-            <img src="assets/img/BILLY.png" class="card-img-top" alt="BILLY">
+
+        <!-- Product 4 -->
+        <div class="product-card me-3">
+          <div class="card h-100 border-0 shadow-sm text-center">
+            <img src="https://www.ikea.com/sg/en/images/products/enhet-hanging-mirror-f-frame-anthracite__0917787_pe785976_s5.jpg?f=s" class="card-img-top" alt="ENHET">
             <div class="card-body">
-              <h6 class="fw-bold mb-1">BILLY</h6>
-              <p class="mb-1 text-muted">Rp.1.300.000</p>
-              <div class="text-warning">★★★★★</div>
+              <h6 class="card-title fw-bold">ENHET</h6>
+              <p class="mb-1">Rp.160.000</p>
+            </div>
+          </div>
+        </div>        
+  
+        <div class="product-card me-3">
+          <div class="card h-100 border-0 shadow-sm text-center">
+            <img src="https://www.ikea.com/sg/en/images/products/sindal-door-mat-natural__76475_pe087957_s5.jpg?f=s" class="card-img-top" alt="SINDAL">
+            <div class="card-body">
+              <h6 class="card-title fw-bold">SINDAL</h6>
+              <p class="mb-1">Rp.80.000</p>
             </div>
           </div>
         </div>
-  
-        <!-- Produk 4 -->
-        <div class="col-6 col-md-4 col-lg-3">
-          <div class="card shadow-sm product-card">
-            <img src="assets/img/SKRUVBY.png" class="card-img-top" alt="SKRUVBY">
+
+        <div class="product-card me-3">
+          <div class="card h-100 border-0 shadow-sm text-center">
+            <img src="https://www.ikea.com/sg/en/images/products/pillemark-door-mat-indoor-rainbow__0806524_pe769979_s5.jpg?f=s" class="card-img-top" alt="PILEMARK">
             <div class="card-body">
-              <h6 class="fw-bold mb-1">SKRUVBY</h6>
-              <p class="mb-1 text-muted">Rp.1.900.000</p>
-              <div class="text-warning">★★★★☆</div>
+              <h6 class="card-title fw-bold">PILEMARK</h6>
+              <p class="mb-1">Rp.90.000</p>
             </div>
           </div>
         </div>
-  
-        <!-- Produk 5 -->
-        <div class="col-6 col-md-4 col-lg-3">
-          <div class="card shadow-sm product-card">
-            <img src="assets/img/FJALLBO.png" class="card-img-top" alt="FJALLBO">
-            <div class="card-body">
-              <h6 class="fw-bold mb-1">FJALLBO</h6>
-              <p class="mb-1 text-muted">Rp.1.500.000</p>
-              <div class="text-warning">★★★★★</div>
-            </div>
-          </div>
-        </div>
-  
-        <!-- Produk 6 -->
-        <div class="col-6 col-md-4 col-lg-3"> 
-          <div class="card shadow-sm product-card">
-            <img src="assets/img/STRANDMON.png" class="card-img-top" alt="STRANDMON">
-            <div class="card-body">
-              <h6 class="fw-bold mb-1">STRANDMON</h6>
-              <p class="mb-1 text-muted">Rp.3.200.000</p>
-              <div class="text-warning">★★★★☆</div>
-            </div>
-          </div>
-        </div>  
-  
-        <!-- Produk 7 -->
-        <div class="col-6 col-md-4 col-lg-3">m 
-          <div class="card shadow-sm product-card">
-            <a href="product-detailsrtamu.html">
-              <img src="assets/img/KIVIK.png" class="card-img-top" alt="KIVIK">
-            </a>  
-            <div class="card-body">
-              <h6 class="fw-bold mb-1">KIVIK</h6>
-              <p class="mb-1 text-muted">Rp.6.300.000</p>
-              <div class="text-warning">★★★★★</div>
-            </div>
-          </div>
-        </div>
-  
-        <!-- Produk 8 -->
-        <div class="col-6 col-md-4 col-lg-3">
-          <div class="card shadow-sm product-card">
-            <img src="assets/img/APPLARYD.png" class="card-img-top" alt="APPLARYD">
-            <div class="card-body">
-              <h6 class="fw-bold mb-1">LART</h6>
-              <p class="mb-1 text-muted">Rp.11.500.000</p>
-              <div class="text-warning">★★★★☆</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+</section>
+
+
   </main>
-  
+
 
   <footer class="footer">
     <div class="footer-top">
